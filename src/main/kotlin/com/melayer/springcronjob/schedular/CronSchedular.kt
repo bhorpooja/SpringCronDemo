@@ -12,22 +12,22 @@ class CronSchedular() {
         val log = LoggerFactory.getLogger(CronSchedular::class.java)
     }
 
-//    @Scheduled(fixedDelay = 1000)
-//    fun scheduleFixedDelayTask() {
-//        log.info("Fixed delay task : ${System.currentTimeMillis() / 1000}")
-//    }
+    @Scheduled(fixedDelay = 1000)
+    fun scheduleFixedDelayTask() {
+        log.info("Fixed delay task : ${System.currentTimeMillis() / 1000}")
+    }
 
-//    @Scheduled(fixedRate = 1000)
-//    fun scheduleFixedRateTask() {
-//        log.info("Fixed rate task : ${System.currentTimeMillis() / 1000}")
-//    }
+    @Scheduled(fixedRate = 1000)
+    fun scheduleFixedRateTask() {
+        log.info("Fixed rate task : ${System.currentTimeMillis() / 1000}")
+    }
 
-//    @Scheduled(fixedDelay = 1000, initialDelay = 2000)
-//    fun scheduleFixedRateWithInitialDelayTask() {
-//
-//        val now = System.currentTimeMillis() / 1000
-//        log.info("Fixed rate task with one second initial delay - $now")
-//    }
+    @Scheduled(fixedDelay = 1000, initialDelay = 2000)
+    fun scheduleFixedRateWithInitialDelayTask() {
+
+        val now = System.currentTimeMillis() / 1000
+        log.info("Fixed rate task with one second initial delay - $now")
+    }
 
 //    Below you can find the example patterns from the spring forum:
 //    * "0 0 * * * *" = the top of every hour of every day.
