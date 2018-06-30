@@ -1,15 +1,12 @@
 package com.melayer.springcronjob.schedular
 
-import com.melayer.springcronjob.repository.StudentRepository
 import org.slf4j.LoggerFactory
 import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Component
 import java.util.*
 
 @Component
-class CronSchedular(
-        private val studentRepository: StudentRepository
-) {
+class CronSchedular() {
     private companion object {
         var map = HashMap<String, Any>()
         val log = LoggerFactory.getLogger(CronSchedular::class.java)
@@ -48,7 +45,7 @@ class CronSchedular(
     fun schedule() {
         log.info("Schedule @ " + Date())
         log.info("@Scheduled(cron=\"* * * * * *\")")
-        log.info("********************")
+        log.info("*****Every Five Minutes*****")
         currentTime()
     }
 //
